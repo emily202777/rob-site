@@ -1,0 +1,100 @@
+
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Apply Fredoka to the entire page */
+body {
+    background-color: white;
+    color: black;
+    font-family: 'Fredoka', sans-serif !important;
+}
+
+/* Apply Fredoka specifically to the header */
+header {
+    background: url('headerGradient.png') no-repeat center center; /* Set background image */
+    background-size: 150% auto; /* Resize image to cover entire header */
+
+    height: 350px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 115px;
+    position: relative;
+}
+
+.menu-icon {
+    width: 40px;  /* Adjust size */
+    height: 40px; /* Ensures a square icon */
+    position: absolute;
+    right: 20px; /* Positions it in the right corner */
+    top: 20px; /* Moves it down from the top */
+    cursor: pointer; /* Makes it clickable */
+    display: block; /* Ensures visibility */
+}
+
+header h1 {
+    font-size: 90px; /* Adjust size as needed */
+    margin: 5px 0;
+}
+
+header h2 {
+    font-size: 34.5px;
+    font-weight: 1;
+    margin-top: 5px;
+}
+
+/* General hexagon styles */
+.hexagon {
+    width: 50px;
+    height: auto;
+    position: absolute;
+    transition: transform 0.3s ease-in-out; /* Smooth animation */
+}
+
+/* Left hexagon (default rotation) */
+.left-hexagon {
+    top: 90px;
+    left: 150px;
+    transform: rotate(45deg);
+}
+
+/* Right hexagon (default rotation) */
+.right-hexagon {
+    top: 200px;
+    right: 80px;
+    transform: rotate(-45deg);
+}
+
+/* Hover effect: Rotate additional 45 degrees */
+.left-hexagon:hover {
+    transform: rotate(90deg);
+}
+
+.right-hexagon:hover {
+    transform: rotate(0deg);
+}
+
+/* Flexbox container for image and text */
+.content-container {
+    display: flex; /* Enables side-by-side layout */
+    align-items: center; /* Aligns items vertically */
+    justify-content: start; /* Ensures left alignment */
+    gap: 30px; /* Adds spacing between image and text */
+    margin: 50px; /* Adds spacing around the section */
+}
+
+/* Team Photo Styling */
+.team-photo {
+    width: 600px; /* Adjust size */
+    height: auto;
+}
+
+/* Text Styling */
+.team-text {
+    font-size: 20px; /* Adjust text size */
+    max-width: 500px; /* Prevents text from stretching too wide */
+}
