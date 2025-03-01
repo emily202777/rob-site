@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Centerville Robotics | FTC 27834</title>
+        <title>Centerville Robotics | Team 27834</title>
     
         <!-- Google Fonts should come before CSS -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,6 +11,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
     
         <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
     </head>
     
 <body>
@@ -22,16 +23,40 @@
         <img src="hexagon.png" class="hexagon right-hexagon">
         <img src="hexagon.png" class="hexagon left-hexagon">
     </header>
-    
+
+    <div class="menu-panel" id="menuPanel">
+        <ul>
+            <li><a href="#">Outreach</a></li>
+            <li><a href="#">Meet the Team</a></li>
+            <li><a href="#">Sponsors</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+        
 
     <main>
         <div class="content-container">
-            <img src="teamPhoto1.png" alt="Team Photo" class="team-photo">
+            <img src="teamPhoto1.png" alt="Team Photo" class="team-photo" id="teamPhoto">
             <p class="team-text">Welcome to the official page of Centerville Robotics Team 27834! Stay tuned for updates.</p>
         </div>
-    </main>
+        
+        <div class="image-indicators">
+            <span class="indicator" data-index="0"></span>
+            <span class="indicator" data-index="1"></span>
+            <span class="indicator" data-index="2"></span>
+        </div>
+        
 
-    
+        <!-- 
+        ADD LATER
+        content container for images & mission statement
+         <div class="subsection">
+            <h1>upcoming competitions</h1>
+            <p>feb 7-8</p>
+            
+
+         </div> -->
+    </main>
 
 
 </body>
