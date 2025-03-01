@@ -98,3 +98,66 @@ header h2 {
     font-size: 20px; /* Adjust text size */
     max-width: 500px; /* Prevents text from stretching too wide */
 }
+
+/* Style for the menu panel */
+.menu-panel {
+    width: 300px;  /* Adjust width */
+    height: 300px; /* Adjust height */
+    background-color: white; /* Dark background */
+    color: white; /* Text color */
+    position: fixed;
+    top: 60px;  /* Adjust distance from top */
+    right: -300px; /* Initially hidden off-screen */
+    transition: right 0.3s ease-in-out;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Show the menu when active */
+.menu-panel.active {
+    right: 20px; /* Slide into view */
+}
+
+.menu-panel ul {
+    list-style: none;  /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+}
+
+.menu-panel li {
+    margin-bottom: 10px; /* Space between menu items */
+}
+
+.menu-panel a {
+    color: black;
+    text-decoration: none; /* Remove underlines */
+    font-size: 23px;
+    display: block; /* Makes each link take full width */
+    padding: 5px 0;
+    text-align: left;
+}
+
+.menu-panel a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.image-indicators {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.indicator {
+    width: 15px;
+    height: 15px;
+    background-color: rgb(213, 213, 213);
+    display: inline-block;
+    margin: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.indicator.active {
+    background-color: rgb(176, 176, 176); /* Highlights active image */
+}
