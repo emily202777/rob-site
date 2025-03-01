@@ -89,9 +89,13 @@ header h2 {
 
 /* Team Photo Styling */
 .team-photo {
-    width: 600px; /* Adjust size */
+    width: 600px; /* Keep the size */
     height: auto;
+    position: relative; /* Allows movement */
+    top: -20px; /* Moves image up (adjust as needed) */
+    left: -20px; /* Moves image up (adjust as needed) */
 }
+
 
 /* Text Styling */
 .team-text {
@@ -145,8 +149,8 @@ header h2 {
 .image-indicators {
     position: absolute; /* Allow manual positioning */
     bottom: auto; /* Remove default positioning */
-    top: 750px; /* Move up (adjust as needed) */
-    left: 300px; /* Move left (adjust as needed) */
+    top: 730px; /* Move up (adjust as needed) */
+    left: 280px; /* Move left (adjust as needed) */
     text-align: left; /* Align indicators to the left */
 }
 
