@@ -143,11 +143,16 @@ header h2 {
 }
 
 .image-indicators {
-    text-align: center;
-    margin-top: 15px;
+    position: absolute; /* Allow manual positioning */
+    bottom: auto; /* Remove default positioning */
+    top: 750px; /* Move up (adjust as needed) */
+    left: 300px; /* Move left (adjust as needed) */
+    text-align: left; /* Align indicators to the left */
 }
 
 .indicator {
+    
+    bottom: 10px;
     width: 15px;
     height: 15px;
     background-color: rgb(213, 213, 213);
