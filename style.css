@@ -173,3 +173,57 @@ header h2 {
 .indicator.active {
     background-color: rgb(176, 176, 176); /* Highlights active image */
 }
+
+.events-section {
+    background-color: black; /* Makes the section black */
+    color: white; /* White text for contrast */
+    padding: 50px 20px; /* Adds spacing inside */
+    text-align: center; /* Centers the content */
+}
+
+.events-content {
+    max-width: 800px; /* Limits the width */
+    margin: 0 auto; /* Centers it horizontally */
+}
+
+.events-content h2 {
+    font-size: 50px; /* Adjust heading size */
+    margin-bottom: 10px;
+}
+
+.events-content p {
+    font-size: 34.5px; /* Adjust text size */
+    font-weight: normal;
+    line-height: 1.6; /* Increases readability */
+}
+
+.sponsors-section {
+    background-color: white; /* White background */
+    color: black; /* Standard text color */
+    padding: 50px 20px; /* Adds spacing around the section */
+    text-align: center; /* Centers content */
+}
+
+.sponsors-content {
+    max-width: 900px; /* Keeps content manageable */
+    margin: 0 auto; /* Centers horizontally */
+}
+
+.sponsors-content h2 {
+    font-size: 50px; /* Larger heading */
+    margin-bottom: 10px;
+}
+
+.sponsor-logos {
+    font-size: 34.5px;
+    display: flex;
+    justify-content: center; /* Aligns logos in center */
+    gap: 30px; /* Space between logos */
+    flex-wrap: wrap; /* Allows wrapping if there are many logos */
+    margin-top: 20px;
+}
+
+.sponsor-logos img {
+    width: 150px; /* Adjust size of logos */
+    height: auto;
+}
