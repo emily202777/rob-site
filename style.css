@@ -102,7 +102,7 @@ header h2 {
     max-width: 600px; /* Prevents text from stretching too wide */
     text-align: left;
     position: relative; /* Allows manual movement */
-    top: -20px; /* Move text up (negative values go up, positive values go down) */
+    top: -2px; /* Move text up (negative values go up, positive values go down) */
 }
 
 
