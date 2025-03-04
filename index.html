@@ -1,78 +1,229 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Centerville Robotics | Team 27834</title>
-        <!-- logo -->
-        <link rel="icon" type="image/x-icon" href="robLogo.ico">
 
-        <!-- Google Fonts should come before CSS -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Apply Fredoka to the entire page */
+body {
+    background-color: white;
+    color: black;
+    font-family: 'Fredoka', sans-serif !important;
+}
+
+/* Apply Fredoka specifically to the header */
+header {
+    background: url('headerGradient.png') no-repeat center center; /* Set background image */
+    background-size: 150% auto; /* Resize image to cover entire header */
+
+    height: 350px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 115px;
+    position: relative;
+}
+
+.menu-icon {
+    width: 40px;  /* Adjust size */
+    height: 40px; /* Ensures a square icon */
+    position: absolute;
+    right: 20px; /* Positions it in the right corner */
+    top: 20px; /* Moves it down from the top */
+    cursor: pointer; /* Makes it clickable */
+    display: block; /* Ensures visibility */
+}
+
+header h1 {
+    font-size: 90px; /* Adjust size as needed */
+    margin: 5px 0;
+}
+
+header h2 {
+    font-size: 34.5px;
+    font-weight: 1;
+    margin-top: 5px;
+}
+
+/* General hexagon styles */
+.hexagon {
+    width: 50px;
+    height: auto;
+    position: absolute;
+    transition: transform 0.3s ease-in-out; /* Smooth animation */
+}
+
+/* Left hexagon (default rotation) */
+.left-hexagon {
+    top: 90px;
+    left: 150px;
+    transform: rotate(45deg);
+}
+
+/* Right hexagon (default rotation) */
+.right-hexagon {
+    top: 200px;
+    right: 80px;
+    transform: rotate(-45deg);
+}
+
+/* Hover effect: Rotate additional 45 degrees */
+.left-hexagon:hover {
+    transform: rotate(90deg);
+}
+
+.right-hexagon:hover {
+    transform: rotate(0deg);
+}
+
+/* Flexbox container for image and text */
+.content-container {
+    display: flex; /* Enables side-by-side layout */
+    align-items: center; /* Aligns items vertically */
+    justify-content: start; /* Ensures left alignment */
+    gap: 30px; /* Adds spacing between image and text */
+    margin: 50px; /* Adds spacing around the section */
+}
+
+/* Team Photo Styling */
+.team-photo {
+    width: 600px; /* Keep the size */
+    height: auto;
+    position: relative; /* Allows movement */
+    top: -20px; /* Moves image up (adjust as needed) */
+    left: -20px; /* Moves image up (adjust as needed) */
+}
+
+
+.team-text {
+    font-size: 30px; /* Adjust text size */
+    max-width: 600px; /* Prevents text from stretching too wide */
+    text-align: left;
+    position: relative; /* Allows manual movement */
+    top: -40px; /* Move text up (negative values go up, positive values go down) */
+}
+
+
+/* Style for the menu panel */
+.menu-panel {
+    width: 300px;  /* Adjust width */
+    height: 300px; /* Adjust height */
+    background-color: white; /* Dark background */
+    color: white; /* Text color */
+    position: fixed;
+    top: 60px;  /* Adjust distance from top */
+    right: -300px; /* Initially hidden off-screen */
+    transition: right 0.3s ease-in-out;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Show the menu when active */
+.menu-panel.active {
+    right: 20px; /* Slide into view */
+}
+
+.menu-panel ul {
+    list-style: none;  /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+}
+
+.menu-panel li {
+    margin-bottom: 10px; /* Space between menu items */
+}
+
+.menu-panel a {
+    color: black;
+    text-decoration: none; /* Remove underlines */
+    font-size: 23px;
+    display: block; /* Makes each link take full width */
+    padding: 5px 0;
+    text-align: left;
+}
+
+.menu-panel a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.image-indicators {
+    position: absolute; /* Allow manual positioning */
+    bottom: auto; /* Remove default positioning */
+    top: 730px; /* Move up (adjust as needed) */
+    left: 280px; /* Move left (adjust as needed) */
+    text-align: left; /* Align indicators to the left */
+}
+
+.indicator {
     
-        <link rel="stylesheet" href="style.css">
-        <script src="script.js"></script>
-    </head>
-    
-<body>
+    bottom: 10px;
+    width: 15px;
+    height: 15px;
+    background-color: rgb(213, 213, 213);
+    display: inline-block;
+    margin: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 
-    <header>
-        <h1>centerville robotics</h1>
-        <h2>team 27834</h2>
-        <img src="menuBar.png" alt="Menu" class="menu-icon">
-        <img src="hexagon.png" class="hexagon right-hexagon">
-        <img src="hexagon.png" class="hexagon left-hexagon">
-    </header>
+.indicator.active {
+    background-color: rgb(176, 176, 176); /* Highlights active image */
+}
 
-    <div class="menu-panel" id="menuPanel">
-        <ul>
-            <li><a href="outreach.html">Outreach</a></li>
-            <li><a href="meetTeam.html">Meet the Team</a></li>
-            <li><a href="sponsors.html">Sponsors</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-    </div>
+.events-section {
+    background-color: black; /* Makes the section black */
+    color: white; /* White text for contrast */
+    padding: 50px 20px; /* Adds spacing inside */
+    text-align: center; /* Centers the content */
+}
 
-    <main>
-        <div class="content-container">
-            <img src="teamPhoto1.png" alt="Team Photo" class="team-photo" id="teamPhoto">
-            <p class="team-text">
-                Our team mission is to increase STEM visibility and participation in our academic-heavy school and community. We strive to introduce kids to engineering and STEM through a fun, hands-on environment. We work to connect with our community and demonstrate the spirit of FTC wherever we go.
+.events-content {
+    max-width: 800px; /* Limits the width */
+    margin: 0 auto; /* Centers it horizontally */
+}
 
-            </p>
-        </div>
-        
-        <div class="image-indicators">
-            <span class="indicator" data-index="0"></span>
-            <span class="indicator" data-index="1"></span>
-            <span class="indicator" data-index="2"></span>
-        </div>
-        
-        <section class="events-section">
-            <div class="events-content">
-                <h2>upcoming events</h2>
-                <p>
-                    developing a mouse droid & t-shirt canon
-                </p>
-            </div>
-        </section>
-        
-        <section class="sponsors-section">
-            <div class="sponsors-content">
-                <h2>our sponsors</h2>
-        
-                <div class="sponsor-logos">
-                    <img src="sponsor1.png" alt="Sponsor 1">
-                    <img src="sponsor2.png" alt="Sponsor 2">
-                    <img src="sponsor3.png" alt="Sponsor 3">
-                </div>
-            </div>
-        </section>
-        
-    </main>
+.events-content h2 {
+    font-size: 50px; /* Adjust heading size */
+    margin-bottom: 10px;
+}
 
+.events-content p {
+    font-size: 34.5px; /* Adjust text size */
+    font-weight: normal;
+    line-height: 1.6; /* Increases readability */
+}
 
-</body>
-</html>
+.sponsors-section {
+    background-color: white; /* White background */
+    color: black; /* Standard text color */
+    padding: 50px 20px; /* Adds spacing around the section */
+    text-align: center; /* Centers content */
+}
+
+.sponsors-content {
+    max-width: 900px; /* Keeps content manageable */
+    margin: 0 auto; /* Centers horizontally */
+}
+
+.sponsors-content h2 {
+    font-size: 50px; /* Larger heading */
+    margin-bottom: 10px;
+}
+
+.sponsor-logos {
+    font-size: 34.5px;
+    display: flex;
+    justify-content: center; /* Aligns logos in center */
+    gap: 30px; /* Space between logos */
+    flex-wrap: wrap; /* Allows wrapping if there are many logos */
+    margin-top: 20px;
+}
+
+.sponsor-logos img {
+    width: 150px; /* Adjust size of logos */
+    height: auto;
+}
