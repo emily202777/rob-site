@@ -1,4 +1,3 @@
-
 /* Reset Styles */
 * {
     margin: 0;
@@ -94,6 +93,7 @@ header h2 {
     position: relative; /* Allows movement */
     top: -20px; /* Moves image up (adjust as needed) */
     left: -20px; /* Moves image up (adjust as needed) */
+    margin-bottom: 0px;
 }
 
 
@@ -103,6 +103,7 @@ header h2 {
     text-align: left;
     position: relative; /* Allows manual movement */
     top: -2px; /* Move text up (negative values go up, positive values go down) */
+    margin-bottom: 0px;
 }
 
 
@@ -172,6 +173,17 @@ header h2 {
 .indicator.active {
     background-color: rgb(176, 176, 176); /* Highlights active image */
 }
+
+.gradient-divider {
+    margin: 0;
+    padding 0;
+    background: url('blackGradient.png') no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    height: 500px; /* Adjust height as needed */
+    display: block;
+}
+
 
 .events-section {
     background-color: black; /* Makes the section black */
